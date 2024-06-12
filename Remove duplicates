@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.*;
+public class RemoveDuplicates {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter n: ");
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        Set<Integer> set=new HashSet<>();
+        for(int i=0;i<n;i++)
+        {
+            int num=input.nextInt();
+            arr[i]=num;
+            set.add(num);
+        }
+        System.out.println(set);
+    }
+    
+}
+Output:
+enter n: 5
+376
+638
+538
+638
+321
+[321, 376, 538, 638]
