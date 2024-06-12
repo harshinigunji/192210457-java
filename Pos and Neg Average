@@ -1,0 +1,127 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package posandnegavg;
+
+/**
+ *
+ * @author harsh
+ */
+import java.util.Scanner;
+public class Posandnegavg {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int pc=0,nc=0;
+        int ps=0,ns=0;
+        while(true)
+        {
+            System.out.println("enter:");
+            int n=input.nextInt();
+            if(n==-1)
+            {
+                break;
+            }
+            else
+            {
+                if(n>0)
+                {
+                    pc++;
+                    ps+=n;
+                }
+                else
+                {
+                    nc++;
+                    ns+=n;
+                }
+            }
+        }
+        if(pc>0)
+        {
+            double pavg=(double)ps/pc;
+            System.out.println("positive avg:"+pavg);
+        }
+        else
+        {
+            System.out.println("NO pos numbers.");
+        }
+        if(nc>0)
+        {
+            double navg=(double)ns/nc;
+            System.out.println("negative avg:"+navg);
+        }
+        else
+        {
+            System.out.println("No negative numbers");
+        }
+    }
+    
+}
+Output:
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package posandnegavg;
+
+/**
+ *
+ * @author harsh
+ */
+import java.util.Scanner;
+public class Posandnegavg {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int pc=0,nc=0;
+        int ps=0,ns=0;
+        while(true)
+        {
+            System.out.println("enter:");
+            int n=input.nextInt();
+            if(n==-1)
+            {
+                break;
+            }
+            else
+            {
+                if(n>0)
+                {
+                    pc++;
+                    ps+=n;
+                }
+                else
+                {
+                    nc++;
+                    ns+=n;
+                }
+            }
+        }
+        if(pc>0)
+        {
+            double pavg=(double)ps/pc;
+            System.out.println("positive avg:"+pavg);
+        }
+        else
+        {
+            System.out.println("NO pos numbers.");
+        }
+        if(nc>0)
+        {
+            double navg=(double)ns/nc;
+            System.out.println("negative avg:"+navg);
+        }
+        else
+        {
+            System.out.println("No negative numbers");
+        }
+    }
+    
+}
