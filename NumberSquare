@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class NumberSquareroot {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int lower=input.nextInt();
+        int upper=input.nextInt();
+        for(int i=lower;i<=upper;i++)
+        {
+            System.out.println("("+i+","+(i*i)+")");
+        }
+    }
+    
+}
+Output:
+12
+15
+(12,144)
+(13,169)
+(14,196)
+(15,225)
