@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.*;
+import java.util.Arrays;
+public class Practices {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int n1=input.nextInt();
+        int[] arr1=new int[n1];
+        for(int i=0;i<n1;i++)
+        {
+            arr1[i]=input.nextInt();
+        }
+        System.out.print("enter n2:");
+        int n2=input.nextInt();
+        int[] arr2=new int[n2];
+        for(int i=0;i<n2;i++)
+        {
+            arr2[i]=input.nextInt();
+        }
+        int[] arr3=new int[n1+n2];
+        mergeArrays(arr1,arr2,n1,n2,arr3);
+        for(int i=0;i<n1+n2;i++)
+        {
+            System.out.print(arr3[i]+" ");
+        }
+    }
+    public static void mergeArrays(int[] arr1,int[] arr2,int n1,int n2,int[] arr3)
+    {
+        int i=0,j=0,k=0;
+        while(i<n1)
+        {
+            arr3[k++]=arr1[i++];
+        }
+        while(j<n2)
+        {
+            arr3[k++]=arr2[j++];
+        }
+        Arrays.sort(arr3);
+    }
+    
+}
+Input:
+enter n1:4
+14
+32
+15
+21
+enter n2:4
+32
+12
+15
+63
+Output:
+12 14 15 15 21 32 32 63
