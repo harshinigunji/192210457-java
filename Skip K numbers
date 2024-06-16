@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Pp {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int m=input.nextInt();
+        int k=input.nextInt();
+        for(int i=m;i<=n;i=i+k+1)
+        {
+            System.out.print(i+" ");
+        }
+    } 
+}
+Input:
+n=100
+m=0
+k=4
+Output:
+0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100
