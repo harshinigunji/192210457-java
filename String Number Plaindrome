@@ -1,0 +1,68 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Pp {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int ch = input.nextInt();
+        switch(ch)
+        {
+            case 1:
+                String s=input.next();
+                boolean isPalin=true;
+                int l=0;
+                int r=s.length()-1;
+                while(l<r)
+                {
+                    if(s.charAt(l)!=s.charAt(r))
+                    {
+                        isPalin=false;
+                        break;
+                    }
+                    l++;
+                    r--;
+                }
+                if(isPalin)
+                {
+                    System.out.print("Palindrome");
+                }
+                else
+                {
+                    System.out.print("Not palindrome");
+                }
+                break;
+            case 2:
+                int n=input.nextInt();
+                String str=Integer.toString(n);
+                int le=0;
+                int ri=str.length()-1;
+                boolean isPal=true;
+                while(le<ri)
+                {
+                    if(str.charAt(le)!=str.charAt(ri))
+                    {
+                        isPal=false;
+                        break;
+                    }
+                    le++;
+                    ri--;
+                }
+                if(isPal)
+                {
+                    System.out.print("Palindrome");
+                }
+                else
+                {
+                    System.out.print("Not palindrome");
+                }
+                break;
+            default:
+                System.out.print("Invalis]d");
+            
+        }
+    }
+}
+Input:
+1
+madam
+Output:
+Palindrome
