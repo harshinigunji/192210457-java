@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class JavaApplication48 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static int revnum(int num)
+    {
+        int rev=0;
+        while(num>0)
+        {
+            int i=num%10;
+            rev=rev*10+i;
+            num/=10;
+        }
+        return rev;
+    }
+    public static boolean check(int num)
+    {
+        int rev=revnum(num);
+        if (rev==num)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static void add(int num)
+    {
+        if(check(num))
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            while(!check(num))
+            {
+                int rev=revnum(num);
+                int sum=num+rev;
+                System.out.println(num+"+"+rev+"="+sum);
+                num=sum;
+            }
+        }
+        System.out.println("Palindrome");
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        add(n);
+      
+    }
+    
+}
+Input:
+7325
+Output:
+7325+5237=12562
+12562+26521=39083
+39083+38093=77176
+77176+67177=144353
+144353+353441=497794
+Palindrome
