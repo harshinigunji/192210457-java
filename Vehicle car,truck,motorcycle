@@ -1,0 +1,109 @@
+class Vehicle 
+{
+    private String licPlate;
+    private String owner;
+
+    public Vehicle(String licPlate, String owner) 
+    {
+        this.licPlate = licPlate;
+        this.owner = owner;
+    }
+
+    public String getLicPlate() 
+    {
+        return licPlate;
+    }
+
+    public void setLicPlate(String licPlate) 
+    {
+        this.licPlate = licPlate;
+    }
+
+    public String getOwner() 
+    {
+        return owner;
+    }
+
+    public void setOwner(String owner) 
+    {
+        this.owner = owner;
+    }
+}
+
+class Car extends Vehicle 
+{
+    private int doors;
+
+    public Car(String licPlate, String owner, int doors) 
+    {
+        super(licPlate, owner);
+        this.doors = doors;
+    }
+
+    public int getDoors() 
+    {
+        return doors;
+    }
+
+    public void setDoors(int doors) 
+    {
+        this.doors = doors;
+    }
+}
+
+class Truck extends Vehicle 
+{
+    private int capacity;
+
+    public Truck(String licPlate, String owner, int capacity) 
+    {
+        super(licPlate, owner);
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() 
+    {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) 
+    {
+        this.capacity = capacity;
+    }
+}
+
+class Motorcycle extends Vehicle {
+    private int fuel;
+
+    public Motorcycle(String licPlate, String owner, int fuel) {
+        super(licPlate, owner);
+        this.fuel = fuel;
+    }
+
+    public int getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(int fuel) {
+        this.fuel = fuel;
+    }
+}
+
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Car car = new Car("ABC123", "Alice", 4);
+        Truck truck = new Truck("XYZ456", "Bob", 5000);
+        Motorcycle motorcycle = new Motorcycle("DEF789", "Charlie", 10);
+
+        System.out.println("Car: License Plate - " + car.getLicPlate() + ", Owner - " + car.getOwner() + ", Number of Doors - " + car.getDoors());
+        System.out.println("Truck: License Plate - " + truck.getLicPlate() + ", Owner - " + truck.getOwner() + ", Load Capacity - " + truck.getCapacity());
+        System.out.println("Motorcycle: License Plate - " + motorcycle.getLicPlate() + ", Owner - " + motorcycle.getOwner() + ", Fuel Level - " + motorcycle.getFuel());
+    }
+}
+
+Output:
+Car: License Plate - ABC123, Owner - Alice, Number of Doors - 4
+Truck: License Plate - XYZ456, Owner - Bob, Load Capacity - 5000
+Motorcycle: License Plate - DEF789, Owner - Charlie, Fuel Level - 10
