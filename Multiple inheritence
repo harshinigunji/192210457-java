@@ -1,0 +1,91 @@
+import java.util.Scanner;
+interface InputMarks
+{
+    void inputMarks();
+}
+
+interface CalcTotAgg
+{
+    void calctotagg();
+    void displaygrade();
+}
+class Student implements InputMarks,CalcTotAgg
+{
+    private int py,cp,pe,mat,ph,ch;
+    private int tot;
+    private double agg;
+    private String grade;
+    @Override
+    public void inputMarks()
+    {
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter the marks in python: ");
+        py = scanner.nextInt();
+        System.out.print("Enter the marks in c programming: ");
+        cp = scanner.nextInt();
+        System.out.print("Enter the marks in Professional Ethics: ");
+        pe = scanner.nextInt();
+        System.out.print("Enter the marks in Mathematics: ");
+        mat = scanner.nextInt();
+        System.out.print("Enter the marks in Physics: ");
+        ph = scanner.nextInt();
+        System.out.print("Enter the marks in Chemistry: ");
+        ch= scanner.nextInt();
+    }
+    @Override
+    public void calctotagg()
+    {
+        tot=py+cp+pe+mat+ph+ch;
+        agg=tot/6.0;
+        if(agg>75)
+        {
+            grade="DISTINCTION";
+        }
+        else if (agg >= 60)
+        {
+            grade = "First Division";
+        } 
+        else if (agg >= 50) 
+        {
+            grade = "Second Division";
+        } 
+        else if (agg >= 40) 
+        {
+            grade = "Third Division";
+        } 
+        else
+        {
+            grade = "FAIL";
+        }
+    }
+    @Override
+    public void displaygrade()
+    {
+        System.out.println("Total:"+tot);
+        System.out.println("Aggregate = " + String.format("%.2f", agg));
+        System.out.println("Class: " + grade);
+    }
+}
+public class Main{
+    public static void main(String[] args)
+    {
+        Student s=new Student();
+        s.inputMarks();
+        s.calctotagg();
+        s.displaygrade();
+    }
+    
+}
+Input:
+Enter the marks in python: 12
+Enter the marks in c programming: 
+32
+Enter the marks in Professional Ethics: 3
+2
+Enter the marks in Mathematics: 13
+Enter the marks in Physics: 23
+Enter the marks in Chemistry: 12
+Output:
+Total:54
+Aggregate = 9.00
+Class: FAIL
