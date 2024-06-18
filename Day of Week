@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.DayOfWeek;
+public class PracPrcatice {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        int d=input.nextInt();
+        int month=input.nextInt();
+        int years=input.nextInt();
+        LocalDate date=LocalDate.of(years,month,d);
+        DayOfWeek day=date.getDayOfWeek();
+        String dayofweek=day.toString();
+        System.out.println("Day:"+dayofweek);
+    }
+    
+}
+Input:
+14
+5
+2005
+Output:
+Day:SATURDAY
